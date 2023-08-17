@@ -43,7 +43,7 @@ class HomeBody extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    width: SizeConfig.width * 0.72,
+                    width: SizeConfig.width * 0.6,
                     decoration: BoxDecoration(
                       color: pallete.primaryLight.withAlpha(10),
                       borderRadius: BorderRadius.circular(30),
@@ -72,6 +72,19 @@ class HomeBody extends StatelessWidget {
                             fontSize: getHeight(14),
                           ),
                         ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).pushNamed("/superimpose"),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: pallete.primaryLight.withAlpha(10),
+                          shape: BoxShape.circle),
+                      child: const Padding(
+                        padding: EdgeInsets.all(12),
+                        child: Icon(Icons.broken_image_rounded),
                       ),
                     ),
                   ),
