@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   lottie: ^2.2.0
+  intl: ^0.18.1
   flutter_svg: ^2.0.7
   drop_shadow: ^0.0.1+4
   animated_text_kit: ^4.2.2
@@ -43,6 +44,7 @@ dependencies:
   font_awesome_flutter: ^10.2.1
   get_storage: ^2.0.3
   google_fonts: ^4.0.3
+  image_picker: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -71,10 +73,13 @@ flutter:
      - assets/icons/
      - assets/extras/
      - assets/images/
+     - assets/images/ai/
+     - assets/images/combo/
+     - assets/images/search/
      - assets/images/products_1/
      - assets/images/products_2/
      - assets/images/products_3/
-     - assets/images/products_pairs/
+     - assets/images/product_pairs/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

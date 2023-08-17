@@ -33,7 +33,7 @@ class PrimaryBtn extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         splashColor: primaryColor,
         child: Ink(
-          height: getHeight(30),
+          height: getHeight(40),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               gradient: LinearGradient(

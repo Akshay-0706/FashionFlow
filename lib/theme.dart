@@ -78,7 +78,7 @@ class Pallete {
   Pallete(this.context);
 
   Color get primary => Theme.of(context).primaryColor;
-  Color get primaryLight => Theme.of(context).primaryColorLight;
   Color get primaryDark => Theme.of(context).primaryColorDark;
+  Color get primaryLight => Theme.of(context).primaryColorLight;
   Color get background => Theme.of(context).backgroundColor;
 }

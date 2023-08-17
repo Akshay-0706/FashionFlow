@@ -26,7 +26,7 @@ class SecondaryBtn extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         splashColor: color,
         child: Ink(
-          height: getHeight(30),
+          height: getHeight(40),
           decoration: BoxDecoration(
               border: Border.all(color: pallete.primaryDark),
               borderRadius: BorderRadius.circular(8),

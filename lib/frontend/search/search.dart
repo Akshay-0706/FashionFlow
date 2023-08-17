@@ -1,3 +1,4 @@
+import 'package:fashionflow/frontend/home/components/product.dart';
 import 'package:fashionflow/size.dart';
 import 'package:fashionflow/theme.dart';
 import 'package:flutter/material.dart';
@@ -5,14 +6,22 @@ import 'package:flutter/material.dart';
 import '../home/components/body.dart';
 
 class Search extends StatefulWidget {
-  const Search({super.key, required this.value});
-  final String value;
+  const Search({super.key});
 
   @override
   State<Search> createState() => _SearchState();
 }
 
 class _SearchState extends State<Search> {
+  List<Product> products = [
+    Product("H&M", 1724),
+    Product("Allen Solly", 2276),
+    Product("Thomas Scott", 609),
+    Product("H&M", 2299),
+    Product("Arrow", 1399),
+    Product("English Navy", 498),
+  ];
+
   @override
   Widget build(BuildContext context) {
     Pallete pallete = Pallete(context);
@@ -75,7 +84,7 @@ class _SearchState extends State<Search> {
                 ),
                 const SizedBox(height: 20),
                 Text(
-                  "Search results for",
+                  "Search results",
                   style: TextStyle(
                     color: pallete.primaryDark,
                     fontSize: 16,
@@ -87,25 +96,23 @@ class _SearchState extends State<Search> {
                     children: [
                       const SizedBox(height: 20),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           CardItem(
-                            index: index,
+                            index: index * 2,
                             length: 0,
-                            title: "Amouk",
-                            subtitle: "Hello",
-                            folder: "products_1",
+                            title: products[index * 2].title,
+                            folder: "search",
                             width: 140,
-                            price: 479,
+                            price: products[index * 2].price,
                           ),
                           CardItem(
-                            index: index,
+                            index: index * 2 + 1,
                             length: 0,
-                            title: "Amouk",
-                            subtitle: "Hello",
-                            folder: "products_1",
+                            title: products[index * 2 + 1].title,
+                            folder: "search",
                             width: 140,
-                            price: 479,
+                            price: products[index * 2 + 1].price,
                           ),
                         ],
                       ),

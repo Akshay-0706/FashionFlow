@@ -11,7 +11,7 @@ class HomeBody extends StatelessWidget {
   HomeBody({super.key});
 
   List<Product> products_1 = [
-    Product("Anouk", 479),
+    Product("H&M", 2699),
     Product("IVOC", 515),
     Product("Bene Kleed", 612),
   ];
@@ -43,7 +43,7 @@ class HomeBody extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    width: SizeConfig.width * 0.6,
+                    width: SizeConfig.width * 0.55,
                     decoration: BoxDecoration(
                       color: pallete.primaryLight.withAlpha(10),
                       borderRadius: BorderRadius.circular(30),
@@ -58,7 +58,7 @@ class HomeBody extends StatelessWidget {
                             color: Theme.of(context).primaryColorDark),
                         onFieldSubmitted: (value) {
                           if (value.isNotEmpty) {
-                            CustomPageRoute(context, Search(value: value));
+                            Navigator.of(context).pushNamed("/search");
                           }
                         },
                         keyboardType: TextInputType.text,
